@@ -1,31 +1,80 @@
+import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 
 import Header from "../Header/Header";
-import HomePage from "../../pages/HomePage/HomePage";
-import SightsPage from "../../pages/SightsPage/SightsPage";
-import TouresPage from "../../pages/TouresPage/TouresPage";
-import BlogPage from "../../pages/BlogPage/BlogPage";
-import AboutPage from "../../pages/AboutPage/AboutPage";
-
-import "./App.scss";
 import Footer from "../Footer/Footer";
+import Preloader from "../Preloader/Preloader";
+import ReactVideo from "../Video/ReactVideo";
+import "./App.scss";
+
+const HomePage = React.lazy(() => import("../../pages/HomePage/HomePage"));
+const SightsPage = React.lazy(() =>
+  import("../../pages/SightsPage/SightsPage")
+);
+const TouresPage = React.lazy(() =>
+  import("../../pages/TouresPage/TouresPage")
+);
+const BlogPage = React.lazy(() => import("../../pages/BlogPage/BlogPage"));
+const AboutPage = React.lazy(() => import("../../pages/AboutPage/AboutPage"));
 
 function App() {
+  const [skipVideo, setSkipVideo] = useState(false);
+
   return (
     <>
-      <div className="wrapper">
-        <Header />
-        <main className="main">
-          <Routes>
-            <Route index path="/" element={<HomePage />} />
-            <Route path="sights" element={<SightsPage />} />
-            <Route path="toures" element={<TouresPage />} />
-            <Route path="blog" element={<BlogPage />} />
-            <Route path="about" element={<AboutPage />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
+      {!skipVideo ? (
+        <ReactVideo setSkipVideo={setSkipVideo} />
+      ) : (
+        <div className="wrapper">
+          <Header />
+          <main className="main">
+            <Routes>
+              <Route
+                index
+                path="/"
+                element={
+                  <React.Suspense fallback={<Preloader />}>
+                    <HomePage />
+                  </React.Suspense>
+                }
+              />
+              <Route
+                path="sights"
+                element={
+                  <React.Suspense fallback={<Preloader />}>
+                    <SightsPage />
+                  </React.Suspense>
+                }
+              />
+              <Route
+                path="toures"
+                element={
+                  <React.Suspense fallback={<Preloader />}>
+                    <TouresPage />
+                  </React.Suspense>
+                }
+              />
+              <Route
+                path="blog"
+                element={
+                  <React.Suspense fallback={<Preloader />}>
+                    <BlogPage />
+                  </React.Suspense>
+                }
+              />
+              <Route
+                path="about"
+                element={
+                  <React.Suspense fallback={<Preloader />}>
+                    <AboutPage />
+                  </React.Suspense>
+                }
+              />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      )}
     </>
   );
 }

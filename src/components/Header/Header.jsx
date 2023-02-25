@@ -20,9 +20,9 @@ const Header = () => {
     <header className="header">
       <div className="container">
         <div className="header__wrapper">
-          <div className="header__logo">
+          <NavLink to='/' className="header__logo">
             <span>LORI TRAVEL</span>
-          </div>
+          </NavLink>
           <nav className="header__navbar">
             <ul className={`navbar__list ${toggleBurgerMenu ? "active" : ""} `}>
               <li className="navbar__item">
