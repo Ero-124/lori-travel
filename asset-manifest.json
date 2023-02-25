@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/lori-travel/static/css/main.fb7441a4.css",
-    "main.js": "/lori-travel/static/js/main.8f5c1827.js",
+    "main.js": "/lori-travel/static/js/main.f85326c6.js",
     "index.html": "/lori-travel/index.html",
     "main.fb7441a4.css.map": "/lori-travel/static/css/main.fb7441a4.css.map",
-    "main.8f5c1827.js.map": "/lori-travel/static/js/main.8f5c1827.js.map"
+    "main.f85326c6.js.map": "/lori-travel/static/js/main.f85326c6.js.map"
   },
   "entrypoints": [
     "static/css/main.fb7441a4.css",
-    "static/js/main.8f5c1827.js"
+    "static/js/main.f85326c6.js"
   ]
 }
