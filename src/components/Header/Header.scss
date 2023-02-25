@@ -1,0 +1,142 @@
+.header {
+  position: relative;
+/*   background-image: url(https://4kwallpapers.com/images/wallpapers/itaimbezinho-canyon-3840x1080-10320.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 20% 20%; */
+
+ /*  &::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.5);
+  } */
+  .header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    height: 100px;
+    .header__logo {
+      span {
+        font-size: 30px;
+        font-weight: 800;
+        letter-spacing: 1.1px;
+      }
+    }
+    .header__navbar {
+      .navbar__list {
+        display: flex;
+        align-items: center;
+        .navbar__item {
+          margin-left: 25px;
+          padding: 8px;
+          &:first-child {
+            margin-left: 0;
+          }
+          .navbar__link {
+            color: var(--color-default);
+            letter-spacing: 1.1px;
+            font-size: 18px;
+            font-family: var(--font-family-secondary);
+            font-weight: 600;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    .header__wrapper {
+      height: 80px;
+      .header__logo {
+        span {
+          font-size: 25px;
+        }
+      }
+      .header__navbar {
+        .navbar__list {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          position: fixed;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          overflow: auto;
+          background-color: #191919;
+          z-index: 2;
+          transition: all 0.8s ease 0s;
+          &.active {
+            left: 0;
+          }
+          .navbar__item {
+            margin: 0;
+            margin-bottom: 25px;
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+      .burger__menu {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 5;
+        transition: all 0.3s ease 0s;
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 3px;
+          background-color: #fff;
+          transition: all 0.3s ease 0s;
+          border-radius: 2px;
+        }
+        &::before {
+          top: 0;
+        }
+        &::after {
+          bottom: 0;
+        }
+
+        span {
+          position: absolute;
+          width: 100%;
+          height: 3px;
+          background-color: #fff;
+          top: 8px;
+          transition: all 0.3s ease 0s;
+          border-radius: 2px;
+        }
+
+        &.active {
+          &::before {
+            top: 8px;
+            transform: rotate(-45deg);
+          }
+          &::after {
+            bottom: 8px;
+            transform: rotate(45deg);
+          }
+          span {
+            transform: scale(0);
+          }
+        }
+      }
+    }
+  }
+}

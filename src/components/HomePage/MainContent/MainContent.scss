@@ -1,0 +1,118 @@
+.main__wrapper {
+  padding-top: 80px;
+  padding-bottom: 100px;
+  .main__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .content__text {
+      flex: 0 0 600px;
+      padding-right: 15px;
+    }
+    .content__title {
+      font-size: 45px;
+      font-weight: 800;
+      text-transform: uppercase;
+      line-height: 160%;
+      margin-bottom: 20px;
+    }
+    .content__subtitle {
+      font-size: 17px;
+      font-family: var(--font-family-secondary);
+      font-weight: 600;
+      line-height: 140%;
+      max-width: 400px;
+      text-transform: capitalize;
+    }
+  }
+  .content__photo {
+    flex: 0 0 49%;
+    height: 350px;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 16px;
+      object-fit: cover;
+      object-position: center center;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .main__wrapper {
+    padding-top: 40px;
+    padding-bottom: 80px;
+    .main__content {
+      .content__text {
+        flex: 1 1 600px;
+        padding-right: 10px;
+      }
+      .content__title {
+        font-size: 35px;
+        margin-bottom: 15px;
+      }
+      .content__subtitle {
+        font-size: 16px;
+      }
+    }
+    .content__photo {
+      height: 250px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main__wrapper {
+    padding-bottom: 40px;
+    .main__content {
+      flex-direction: column;
+      .content__text {
+        flex: none;
+        width: 100%;
+        padding-right: 0;
+        text-align: center;
+      }
+      .content__title {
+        font-size: 35px;
+        margin-bottom: 15px;
+      }
+      .content__subtitle {
+        max-width: 500px;
+        font-size: 16px;
+        margin: 0 auto;
+      }
+    }
+    .content__photo {
+      flex: none;
+      width: 100%;
+      margin-top: 25px;
+      position: relative;
+
+      img {
+        object-position: 0 20%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .main__wrapper {
+    .main__content {
+      .content__title {
+        font-size: 25px;
+        margin-bottom: 10px;
+      }
+      .content__subtitle {
+        max-width: 300px;
+        font-size: 14px;
+      }
+    }
+    .content__photo {
+      height: 200px;
+    }
+  }
+}
