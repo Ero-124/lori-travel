@@ -12,6 +12,10 @@ const Header = () => {
     setToggleBurgerMenu(!toggleBurgerMenu);
   };
 
+  const handleClickLink = () => {
+    setToggleBurgerMenu(false);
+  };
+
   return (
     <header className="header">
       <div className="container">
@@ -22,27 +26,47 @@ const Header = () => {
           <nav className="header__navbar">
             <ul className={`navbar__list ${toggleBurgerMenu ? "active" : ""} `}>
               <li className="navbar__item">
-                <NavLink to="/" className="navbar__link">
+                <NavLink
+                  to="/"
+                  className="navbar__link"
+                  onClick={handleClickLink}
+                >
                   Home
                 </NavLink>
               </li>
               <li className="navbar__item">
-                <NavLink to="/sights" className="navbar__link">
+                <NavLink
+                  to="/sights"
+                  className="navbar__link"
+                  onClick={handleClickLink}
+                >
                   Sights
                 </NavLink>
               </li>
               <li className="navbar__item">
-                <NavLink to="/toures" className="navbar__link">
+                <NavLink
+                  to="/toures"
+                  className="navbar__link"
+                  onClick={handleClickLink}
+                >
                   Toures
                 </NavLink>
               </li>
               <li className="navbar__item">
-                <NavLink to="/blog" className="navbar__link">
+                <NavLink
+                  to="/blog"
+                  className="navbar__link"
+                  onClick={handleClickLink}
+                >
                   Blog
                 </NavLink>
               </li>
               <li className="navbar__item">
-                <NavLink to="/about" className="navbar__link">
+                <NavLink
+                  to="/about"
+                  className="navbar__link"
+                  onClick={handleClickLink}
+                >
                   About us
                 </NavLink>
               </li>

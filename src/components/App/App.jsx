@@ -18,10 +18,10 @@ function App() {
         <main className="main">
           <Routes>
             <Route index path="/" element={<HomePage />} />
-            <Route path="/sights" element={<SightsPage />} />
-            <Route path="/toures" element={<TouresPage />} />
-            <Route path="/blog" element={<BlogPage />} />
-            <Route path="/about" element={<AboutPage />} />
+            <Route path="sights" element={<SightsPage />} />
+            <Route path="toures" element={<TouresPage />} />
+            <Route path="blog" element={<BlogPage />} />
+            <Route path="about" element={<AboutPage />} />
           </Routes>
         </main>
         <Footer />
