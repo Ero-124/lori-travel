@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunklori_travel=self.webpackChunklori_travel||[]).push([[643],{643:function(e,r,t){t.r(r);t(791);var u=t(184);r.default=function(){return(0,u.jsx)("div",{children:"AboutPage"})}}}]);
+//# sourceMappingURL=643.06d74834.chunk.js.map
