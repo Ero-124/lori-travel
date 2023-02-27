@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { useWindowSize } from "../../hooks/useWindowSize";
 import "./Header.scss";
 
-const Header = () => {
+const Header = ({ headerRef }) => {
   const [toggleBurgerMenu, setToggleBurgerMenu] = useState(false);
 
   const width = useWindowSize();
@@ -17,10 +17,10 @@ const Header = () => {
   };
 
   return (
-    <header className="header">
+    <header className="header" id="home" >
       <div className="container">
         <div className="header__wrapper">
-          <NavLink to='/' className="header__logo">
+          <NavLink to="/" className="header__logo">
             <span>LORI TRAVEL</span>
           </NavLink>
           <nav className="header__navbar">

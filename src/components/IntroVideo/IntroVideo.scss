@@ -1,0 +1,154 @@
+body {
+  overflow: hidden;
+}
+.rh5v-Overlay_component {
+  z-index: -1;
+}
+.video__wrapper {
+  position: relative;
+  video {
+    width: 100% !important;
+    height: 100vh !important;
+    object-fit: cover !important;
+  }
+  .skip__btn {
+    position: absolute;
+    transform: translate(-70px -30px);
+    left: 30px;
+    bottom: 70px;
+
+    /*   a {
+      color: #959595;
+      cursor: pointer;
+      background: #d8d8d8;
+      padding: 15px 30px;
+      border-radius: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+
+      &.active {
+        background-color: #24eb22;
+        color: #fff;
+      }
+    } */
+    a {
+      display: block;
+      position: relative;
+      padding: 15px 30px;
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      border-radius: 16px;
+      color: #959595;
+      background-color: #d8d8d8;
+      z-index: 10000000;
+      transition: all 0.5s;
+      overflow: hidden;
+
+      &.active {
+        left: -50%;
+        transform: translate(50vw, -50vh);
+        background-color: #24eb22;
+        color: #fff;
+        -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+
+        &:hover {
+          box-shadow: 0 0 5px #24eb22, 0 0 25px #24eb22, 0 0 50px #24eb22,
+            0 0 200px #24eb22;
+        }
+      }
+
+      span {
+        position: absolute;
+        display: block;
+
+        &:nth-child(1) {
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 2px;
+          background: linear-gradient(90deg, transparent, #d8d8d8);
+          animation: animate1 1s linear infinite;
+        }
+
+        @keyframes animate1 {
+          0% {
+            left: -100%;
+          }
+          50%,
+          100% {
+            left: 100%;
+          }
+        }
+
+        &:nth-child(2) {
+          top: -100%;
+          right: 0;
+          width: 2px;
+          height: 100%;
+          background: linear-gradient(180deg, transparent, #d8d8d8);
+          animation: animate2 1s linear infinite;
+          animation-delay: 0.25s;
+        }
+
+        @keyframes animate2 {
+          0% {
+            top: -100%;
+          }
+          50%,
+          100% {
+            top: 100%;
+          }
+        }
+
+        &:nth-child(3) {
+          bottom: 0%;
+          right: -100%;
+          width: 100%;
+          height: 2px;
+          background: linear-gradient(270deg, transparent, #d8d8d8);
+          animation: animate3 1s linear infinite;
+          animation-delay: 0.5s;
+        }
+
+        @keyframes animate3 {
+          0% {
+            right: -100%;
+          }
+          50%,
+          100% {
+            right: 100%;
+          }
+        }
+
+        &:nth-child(4) {
+          bottom: -100%;
+          left: 0%;
+          width: 2px;
+          height: 100%;
+          background: linear-gradient(360deg, transparent, #d8d8d8);
+          animation: animate4 1s linear infinite;
+          animation-delay: 0.75s;
+        }
+
+        @keyframes animate4 {
+          0% {
+            bottom: -100%;
+          }
+          50%,
+          100% {
+            bottom: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* button.active {
+  left: 50%;
+  right: auto;
+  top: 50%;
+  bottom: auto;
+} */
