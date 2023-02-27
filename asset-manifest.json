@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/lori-travel/static/css/main.e2d2c407.css",
-    "main.js": "/lori-travel/static/js/main.2d922883.js",
+    "main.css": "/lori-travel/static/css/main.57b9ef14.css",
+    "main.js": "/lori-travel/static/js/main.c57421d7.js",
     "static/css/835.0bad3a3c.chunk.css": "/lori-travel/static/css/835.0bad3a3c.chunk.css",
     "static/js/835.2e11093a.chunk.js": "/lori-travel/static/js/835.2e11093a.chunk.js",
     "static/js/814.2084aa95.chunk.js": "/lori-travel/static/js/814.2084aa95.chunk.js",
     "static/js/432.d2fd3b36.chunk.js": "/lori-travel/static/js/432.d2fd3b36.chunk.js",
     "static/js/975.29700d12.chunk.js": "/lori-travel/static/js/975.29700d12.chunk.js",
     "static/js/643.06d74834.chunk.js": "/lori-travel/static/js/643.06d74834.chunk.js",
-    "static/media/y2mate.com - Lori Province Armenia  The ancient soul of Nature_360p.mp4": "/lori-travel/static/media/y2mate.com - Lori Province Armenia  The ancient soul of Nature_360p.ecf445ae5b5a32453543.mp4",
+    "static/media/vanadzor.mp4": "/lori-travel/static/media/vanadzor.d9283bf57965eba5694a.mp4",
     "index.html": "/lori-travel/index.html",
-    "main.e2d2c407.css.map": "/lori-travel/static/css/main.e2d2c407.css.map",
-    "main.2d922883.js.map": "/lori-travel/static/js/main.2d922883.js.map",
+    "main.57b9ef14.css.map": "/lori-travel/static/css/main.57b9ef14.css.map",
+    "main.c57421d7.js.map": "/lori-travel/static/js/main.c57421d7.js.map",
     "835.0bad3a3c.chunk.css.map": "/lori-travel/static/css/835.0bad3a3c.chunk.css.map",
     "835.2e11093a.chunk.js.map": "/lori-travel/static/js/835.2e11093a.chunk.js.map",
     "814.2084aa95.chunk.js.map": "/lori-travel/static/js/814.2084aa95.chunk.js.map",
@@ -20,7 +20,7 @@
     "643.06d74834.chunk.js.map": "/lori-travel/static/js/643.06d74834.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e2d2c407.css",
-    "static/js/main.2d922883.js"
+    "static/css/main.57b9ef14.css",
+    "static/js/main.c57421d7.js"
   ]
 }
