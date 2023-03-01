@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
-import ReactVideo from "../IntroVideo/IntroVideo";
+import IntroVideo from "../IntroVideo/IntroVideo";
 import RoutesConfig from "../../routes/RoutesConfig";
 import AosEffect from "../../shared/AosEffect/AosEffect";
 import "./App.scss";
@@ -31,7 +31,7 @@ function App() {
     );
   } else {
     if (!skipVideo) {
-      return <ReactVideo skipVideo={skipVideo} setSkipVideo={setSkipVideo} />;
+      return <IntroVideo skipVideo={skipVideo} setSkipVideo={setSkipVideo} />;
     }
   }
 }
