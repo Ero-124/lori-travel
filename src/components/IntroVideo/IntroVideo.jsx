@@ -1,12 +1,27 @@
-import React, { useState } from "react";
-import { DefaultPlayer as Video } from "react-html5video";
-import introVideo2 from "./video/vanadzor.mp4";
-import "react-html5video/dist/styles.css";
+import React, { useRef, useState, useEffect } from "react";
+import PropTypes from 'prop-types';
+
+import introVideo2 from "./video/videoplayback.webm";
 import "./IntroVideo.scss";
 
 const IntroVideo = ({ skipVideo, setSkipVideo }) => {
-  //const [video, setVideo] = useState(false);
   const [activeClass, setActiveClass] = useState();
+
+  function MyVideoComponent() {
+    const videoRef = useRef(null);
+    useEffect(() => {
+      if (videoRef) {
+        videoRef.current.play();
+      }
+    }, []);
+    return (
+      <>
+        <video ref={videoRef} autoPlay loop muted>
+          <source src={introVideo2} type="video/webm" />
+        </video>
+      </>
+    );
+  }
 
   setTimeout(() => {
     setActiveClass("active");
@@ -15,34 +30,39 @@ const IntroVideo = ({ skipVideo, setSkipVideo }) => {
   const handleSkipVideo = () => {
     setTimeout(() => {
       setSkipVideo(true);
+      sessionStorage.clear();
+      sessionStorage.setItem("video", "1");
       document.body.style.overflowY = "scroll";
-    }, 1000);
+    }, 100);
   };
 
   return (
-    <div className="video__wrapper">
+    <>
       {!skipVideo && (
-        <Video autoPlay loop muted controls={[]}>
-          <source src={introVideo2} type="video/webm" />
-        </Video>
+        <div className="video__wrapper">
+          {MyVideoComponent()}
+          <a
+            href="#home"
+            onClick={handleSkipVideo}
+            className={`skip__btn ${activeClass}`}
+            /*  className={activeClass && "active"} */
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Skip
+          </a>
+        </div>
       )}
-
-      <div className="skip__btn">
-        <a
-          href="#home"
-          onClick={handleSkipVideo}
-          className={activeClass}
-          /*  className={activeClass && "active"} */
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          Skip
-        </a>
-      </div>
-    </div>
+    </>
   );
+};
+
+
+IntroVideo.propTypes = {
+  skipVideo: PropTypes.bool,
+  setSkipVideo: PropTypes.func,
 };
 
 export default IntroVideo;

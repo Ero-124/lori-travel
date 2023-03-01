@@ -1,19 +1,10 @@
 .header {
-  position: relative;
-/*   background-image: url(https://4kwallpapers.com/images/wallpapers/itaimbezinho-canyon-3840x1080-10320.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 20% 20%; */
-
- /*  &::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: rgba(0, 0, 0, 0.5);
-  } */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 1000000;
   .header__wrapper {
     display: flex;
     justify-content: space-between;

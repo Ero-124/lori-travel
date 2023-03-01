@@ -1,7 +1,10 @@
 import React from "react";
+import AosEffect from "../../../shared/AosEffect/AosEffect";
 import "./MainContent.scss";
 
 const MainContent = () => {
+  AosEffect();
+
   return (
     <section className="main__wrapper">
       <div className="container">
