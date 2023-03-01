@@ -15,10 +15,17 @@ const Header = () => {
 
   const handleClickMenu = () => {
     setToggleBurgerMenu(!toggleBurgerMenu);
+
+    if (!toggleBurgerMenu) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
   };
 
   const handleClickLink = () => {
     setToggleBurgerMenu(false);
+    document.body.style.overflow = "";
   };
 
   return (
@@ -28,8 +35,11 @@ const Header = () => {
           <NavLink to="/" className="header__logo">
             <span>LORI TRAVEL</span>
           </NavLink>
-          <nav className="header__navbar" data-aos={width > 769 && 'fade-left'}>
-            <ul className={`navbar__list ${toggleBurgerMenu ? "active" : ""} `}>
+          <nav
+            className={`header__navbar ${toggleBurgerMenu ? "active" : ""}`}
+            data-aos={width > 769 && "fade-left"}
+          >
+            <ul className={`navbar__list  `}>
               {navbarList.map(({ name, to }) => {
                 return (
                   <li key={name} className="navbar__item">
