@@ -11,10 +11,10 @@
     object-fit: cover !important;
   }
 
-  a {
+  .skip__btn {
     position: absolute;
     right: 30px;
-    bottom: calc(100vh - 30px);
+    bottom: 30px;
     display: block;
     padding: 15px 30px;
     font-size: 18px;
@@ -26,6 +26,7 @@
     z-index: 10000000;
     transition: all 0.5s;
     overflow: hidden;
+    font-family: 'raleway', sans-serif;
 
     &.active {
       right: 50%;
@@ -123,6 +124,16 @@
           bottom: 100%;
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .video__wrapper {
+    .skip__btn {
+      bottom: 90px;
+      letter-spacing: 1px;
+   
     }
   }
 }
