@@ -1,17 +1,15 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useWindowSize } from "../../hooks/useWindowSize";
-
 import AosEffect from "../../shared/AosEffect/AosEffect";
 import { navbarList } from "../NavbarList/NavbarList";
+import ChangeLanguage from "./ChangeLanguage/ChangeLanguage";
 import "./Header.scss";
 
 const Header = () => {
   AosEffect();
-
-  const [toggleBurgerMenu, setToggleBurgerMenu] = useState(false);
-
   const width = useWindowSize();
+  const [toggleBurgerMenu, setToggleBurgerMenu] = useState(false);
 
   const handleClickMenu = () => {
     setToggleBurgerMenu(!toggleBurgerMenu);
@@ -54,6 +52,7 @@ const Header = () => {
                 );
               })}
             </ul>
+            <ChangeLanguage />
           </nav>
           {width <= 769 && (
             <div

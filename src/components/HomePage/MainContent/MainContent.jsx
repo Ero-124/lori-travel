@@ -1,8 +1,11 @@
 import React from "react";
 import AosEffect from "../../../shared/AosEffect/AosEffect";
+import useLanguage from "../../../hooks/useLanguageContext";
+import traduction from "../../../Data.json";
 import "./MainContent.scss";
 
 const MainContent = () => {
+  const { language } = useLanguage();
   AosEffect();
 
   return (
@@ -10,12 +13,9 @@ const MainContent = () => {
       <div className="container">
         <div className="main__content">
           <div className="content__text">
-            <h1 className="content__title">
-              Let's discover the beautiful corners of Lori togheter
-            </h1>
+            <h1 className="content__title">{traduction[language].heading}</h1>
             <p className="content__subtitle">
-              Lets Start Your Journey With Us. Let Your Dream Will Come True
-              With Amazing Travel Destinations, Activities And More...
+              {traduction[language].subheading}
             </p>
           </div>
           <div className="content__photo">

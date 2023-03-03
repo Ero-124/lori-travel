@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-
+import AosEffect from "../../shared/AosEffect/AosEffect";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import IntroVideo from "../IntroVideo/IntroVideo";
 import RoutesConfig from "../../routes/RoutesConfig";
-import AosEffect from "../../shared/AosEffect/AosEffect";
 import "./App.scss";
 
 function App() {
@@ -38,9 +37,7 @@ function App() {
 
 export default App;
 
-
-
- /*   return (
+/*   return (
     <>
       {!skipVideo && (
         <ReactVideo skipVideo={skipVideo} setSkipVideo={setSkipVideo} />

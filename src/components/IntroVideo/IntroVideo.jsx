@@ -1,6 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
 import PropTypes from 'prop-types';
-
 import introVideo2 from "./video/videoplayback.webm";
 import "./IntroVideo.scss";
 

@@ -1,0 +1,50 @@
+@media screen and (max-width: 767px) {
+  .change__language {
+    position: absolute;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    left: 30px;
+    top: 0;
+  }
+}
+.label__lang {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 20px;
+  img {
+    width: 20px;
+    height: 20px;
+    margin-left: 6px;
+  }
+}
+:where(.css-dev-only-do-not-override-10ed4xt).ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+  padding: 0 7px;
+  width: 94%;
+
+}
+/* .country__logo {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+}
+
+:where(
+    .css-dev-only-do-not-override-10ed4xt
+  ).ant-select-single.ant-select-show-arrow
+  .ant-select-selection-item,
+:where(
+    .css-dev-only-do-not-override-10ed4xt
+  ).ant-select-single.ant-select-show-arrow
+  .ant-select-selection-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.country__name {
+  min-width: 50px;
+}
+
+ */
