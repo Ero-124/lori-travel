@@ -1,26 +1,30 @@
 {
   "files": {
-    "main.css": "/lori-travel/static/css/main.a4ce12c6.css",
-    "main.js": "/lori-travel/static/js/main.9ff1f16d.js",
-    "static/css/835.c646e709.chunk.css": "/lori-travel/static/css/835.c646e709.chunk.css",
-    "static/js/835.c4569866.chunk.js": "/lori-travel/static/js/835.c4569866.chunk.js",
+    "main.css": "/lori-travel/static/css/main.184105e2.css",
+    "main.js": "/lori-travel/static/js/main.71af7b8c.js",
+    "static/css/83.9059b748.chunk.css": "/lori-travel/static/css/83.9059b748.chunk.css",
+    "static/js/83.4cddb3ca.chunk.js": "/lori-travel/static/js/83.4cddb3ca.chunk.js",
     "static/js/814.2084aa95.chunk.js": "/lori-travel/static/js/814.2084aa95.chunk.js",
     "static/js/432.d2fd3b36.chunk.js": "/lori-travel/static/js/432.d2fd3b36.chunk.js",
     "static/js/975.29700d12.chunk.js": "/lori-travel/static/js/975.29700d12.chunk.js",
     "static/js/643.06d74834.chunk.js": "/lori-travel/static/js/643.06d74834.chunk.js",
     "static/media/videoplayback.webm": "/lori-travel/static/media/videoplayback.13eb1869f515eac017e7.webm",
+    "static/media/bgMenu.jpg": "/lori-travel/static/media/bgMenu.2f7e72e447ec0c72ae96.jpg",
+    "static/media/usa.svg": "/lori-travel/static/media/usa.9c533cc9072de5edf0a69eb78eb0b008.svg",
+    "static/media/armenia.svg": "/lori-travel/static/media/armenia.7e93de4b7dccd9c4fd0acfd37b66515b.svg",
+    "static/media/russia.svg": "/lori-travel/static/media/russia.f7ed61c974ace7ee4afd924a2d3204ef.svg",
     "index.html": "/lori-travel/index.html",
-    "main.a4ce12c6.css.map": "/lori-travel/static/css/main.a4ce12c6.css.map",
-    "main.9ff1f16d.js.map": "/lori-travel/static/js/main.9ff1f16d.js.map",
-    "835.c646e709.chunk.css.map": "/lori-travel/static/css/835.c646e709.chunk.css.map",
-    "835.c4569866.chunk.js.map": "/lori-travel/static/js/835.c4569866.chunk.js.map",
+    "main.184105e2.css.map": "/lori-travel/static/css/main.184105e2.css.map",
+    "main.71af7b8c.js.map": "/lori-travel/static/js/main.71af7b8c.js.map",
+    "83.9059b748.chunk.css.map": "/lori-travel/static/css/83.9059b748.chunk.css.map",
+    "83.4cddb3ca.chunk.js.map": "/lori-travel/static/js/83.4cddb3ca.chunk.js.map",
     "814.2084aa95.chunk.js.map": "/lori-travel/static/js/814.2084aa95.chunk.js.map",
     "432.d2fd3b36.chunk.js.map": "/lori-travel/static/js/432.d2fd3b36.chunk.js.map",
     "975.29700d12.chunk.js.map": "/lori-travel/static/js/975.29700d12.chunk.js.map",
     "643.06d74834.chunk.js.map": "/lori-travel/static/js/643.06d74834.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a4ce12c6.css",
-    "static/js/main.9ff1f16d.js"
+    "static/css/main.184105e2.css",
+    "static/js/main.71af7b8c.js"
   ]
 }
