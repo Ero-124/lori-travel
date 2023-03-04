@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans+Armenian:regular,500,600,700,800,900);
 * {
   padding: 0;
   margin: 0;
@@ -73,32 +74,14 @@ body {
   font-family: var(--font-family-default);
   min-height: 100vh;
   width: 100%;
-  background-size: 300% 300%;
-  background: linear-gradient(
-    90deg,
-    rgba(114, 121, 100, 1) 24%,
-    rgba(123, 131, 76, 1) 51%,
-    rgba(108, 95, 49, 1) 77%,
-    rgba(123, 131, 76, 1) 94%
-  );
-
-  /*   background: rgb(114,121,100); */
-  /*  background-image: linear-gradient(45deg, #d2001a, #7462ff, #f48e21, #23d5ab); */
-  /* animation: colorAnimation 12s ease-in-out infinite; */
+  background: rgba(0, 0, 0, 0.4);
+  background-image: url(https://www.cbd.int/sites/default/files/2022-10/johannes-plenio-e7nddmyzh54-unsplash.jpg);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  /* https://thedispatch.blob.core.windows.net/thedispatchimages/2022/04/1913623.jpeg */
 }
-/* @keyframes colorAnimation {
-  0% {
-    background-position: 0 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0 50%;
-  }
-} */
 
 .wrapper {
   display: flex;
@@ -135,14 +118,20 @@ main {
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(
     360deg,
-    rgb(131, 190, 13) 24%,
-    rgb(6, 150, 42) 51%,
-    rgb(3, 136, 83) 77%,
-    rgb(3, 158, 24) 94%
+    rgb(190 205 159) 24%,
+    rgb(17 66 30) 51%,
+    rgb(4 40 26) 77%,
+    rgb(24 74 31) 94%
   );
 
   border-radius: 8px;
   transition: all 0.3s;
+}
+
+@media screen and (max-width: 767px) {
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
 }
 
 :root {
@@ -150,4 +139,5 @@ main {
 
   --font-family-default: "Roboto", sans-serif;
   --font-family-secondary: "Raleway", sans-serif;
+  --font-family-armenian: "Noto Sans Armenian", sans-serif;
 }

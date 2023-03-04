@@ -14,17 +14,21 @@ function App() {
   if (sessionStorage.getItem("video")) {
     return (
       <>
-        <div
-          className="wrapper"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-anchor-placement="top-bottom"
-        >
+        <div className="wrapper">
           <Header />
-          <main className="main">
+          <main
+            className="main"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-anchor-placement="top-bottom"
+          >
             <RoutesConfig />
           </main>
-          <Footer />
+          <Footer
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-anchor-placement="top-bottom"
+          />
         </div>
       </>
     );

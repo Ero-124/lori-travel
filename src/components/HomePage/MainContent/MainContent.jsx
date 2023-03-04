@@ -1,7 +1,7 @@
 import React from "react";
 import AosEffect from "../../../shared/AosEffect/AosEffect";
 import useLanguage from "../../../hooks/useLanguageContext";
-import traduction from "../../../Data.json";
+import traduction from "../language.json";
 import "./MainContent.scss";
 
 const MainContent = () => {

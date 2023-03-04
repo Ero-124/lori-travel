@@ -1,9 +1,11 @@
 import React, { useRef, useState, useEffect } from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
+import useLanguage from "../../hooks/useLanguageContext";
 import introVideo2 from "./video/videoplayback.webm";
+import traduction from "./language.json";
 import "./IntroVideo.scss";
-
 const IntroVideo = ({ skipVideo, setSkipVideo }) => {
+  const { language } = useLanguage();
   const [activeClass, setActiveClass] = useState();
 
   function MyVideoComponent() {
@@ -50,14 +52,13 @@ const IntroVideo = ({ skipVideo, setSkipVideo }) => {
             <span></span>
             <span></span>
             <span></span>
-            Skip
+            {traduction[language].skip}
           </a>
         </div>
       )}
     </>
   );
 };
-
 
 IntroVideo.propTypes = {
   skipVideo: PropTypes.bool,

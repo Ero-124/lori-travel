@@ -16,17 +16,15 @@
     right: 30px;
     bottom: 30px;
     display: block;
-    padding: 15px 30px;
+    padding: 14px 25px;
     font-size: 18px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
     border-radius: 16px;
     color: #959595;
     background-color: #d8d8d8;
     z-index: 10000000;
     transition: all 0.5s;
     overflow: hidden;
-    font-family: 'raleway', sans-serif;
+    font-family: "raleway", sans-serif;
 
     &.active {
       right: 50%;
@@ -133,7 +131,6 @@
     .skip__btn {
       bottom: 90px;
       letter-spacing: 1px;
-   
     }
   }
 }

@@ -1,0 +1,218 @@
+.header__navbar {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 10000000;
+  .navbar__list {
+    display: flex;
+    align-items: center;
+    .navbar__item {
+      margin-left: 20px;
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 8px;
+      }
+      .navbar__link {
+        position: relative;
+        display: inline-block;
+        color: var(--color-default);
+        border: 2px solid rgb(19, 221, 19);
+        padding: 8px;
+        letter-spacing: 1.1px;
+        font-size: 17px;
+        font-family: var(--font-family-secondary);
+        font-weight: 600;
+        text-transform: uppercase;
+        overflow: hidden;
+        border-radius: 8px;
+
+        span {
+          position: relative;
+          z-index: 2;
+          transition: 1s;
+        }
+
+        .wave {
+          position: absolute;
+          top: calc(100% + 22px);
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgb(19, 221, 19);
+          transition: 1s;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: -22px;
+            left: 0;
+            width: 100%;
+            height: 22px;
+            background: url("./img/wave.png");
+            animation: animate 0.5s linear infinite;
+          }
+
+          @keyframes animate {
+            0% {
+              background-position-x: 0;
+              background-position-y: -22px;
+            }
+            100% {
+              background-position-x: 118px;
+              background-position-y: -22px;
+            }
+          }
+        }
+
+        &:hover {
+          .wave {
+            top: 0;
+          }
+        }
+
+        &:before {
+          content: "";
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .header__navbar {
+    .navbar__list {
+      .navbar__item {
+        margin-left: 10px;
+        .navbar__link {
+          font-size: 13px;
+          padding: 5px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header__navbar {
+    background-image: url("./img/bgMenu.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-blend-mode: overlay;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    background-color: #191919;
+    z-index: 2;
+    transition: all 0.8s ease 0s;
+    &.active {
+      left: 0;
+    }
+    .navbar__list {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transform: translateY(50%);
+      .navbar__item {
+        margin: 0;
+        margin-bottom: 25px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .navbar__link {
+          position: relative;
+          display: inline-block;
+          color: var(--color-default);
+          border: 0;
+          padding: 8px;
+          letter-spacing: 1.1px;
+          font-size: 17px;
+          font-family: var(--font-family-secondary);
+          font-weight: 600;
+          text-transform: uppercase;
+          overflow: hidden;
+          border-radius: 8px;
+
+          span {
+            position: relative;
+            z-index: 2;
+            transition: 1s;
+          }
+
+          .wave {
+            position: absolute;
+            top: calc(100% + 22px);
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            transition: 1s;
+
+            &::before {
+              content: "";
+              background: none;
+              animation: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .burger__menu {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    z-index: 5;
+    transition: all 0.3s ease 0s;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background-color: #fff;
+      transition: all 0.3s ease 0s;
+      border-radius: 2px;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+
+    span {
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background-color: #fff;
+      top: 8px;
+      transition: all 0.3s ease 0s;
+      border-radius: 2px;
+    }
+
+    &.active {
+      &::before {
+        top: 8px;
+        transform: rotate(-45deg);
+      }
+      &::after {
+        bottom: 8px;
+        transform: rotate(45deg);
+      }
+      span {
+        transform: scale(0);
+      }
+    }
+  }
+}

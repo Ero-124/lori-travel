@@ -10,41 +10,39 @@ const ChangeLanguage = () => {
   const { language, switchLanguage } = useLanguage();
   return (
     <div className="change__language">
-      <div className="container">
-        <Select
-          defaultValue={language}
-          onChange={(value) => switchLanguage(value)}
-          options={[
-            {
-              value: "en",
-              label: (
-                <span className="label__lang">
-                  EN
-                  <img src={flagUsa} alt="" />
-                </span>
-              ),
-            },
-            {
-              value: "am",
-              label: (
-                <span className="label__lang">
-                  AM
-                  <img src={flagArmenia} alt="" />
-                </span>
-              ),
-            },
-            {
-              value: "ru",
-              label: (
-                <span className="label__lang">
-                  RU
-                  <img src={flagRussia} alt="" />
-                </span>
-              ),
-            },
-          ]}
-        />
-      </div>
+      <Select
+        defaultValue={language}
+        onChange={(value) => switchLanguage(value)}
+        options={[
+          {
+            value: "en",
+            label: (
+              <span className="label__lang">
+                EN
+                <img src={flagUsa} alt="" />
+              </span>
+            ),
+          },
+          {
+            value: "am",
+            label: (
+              <span className="label__lang">
+                AM
+                <img src={flagArmenia} alt="" />
+              </span>
+            ),
+          },
+          {
+            value: "ru",
+            label: (
+              <span className="label__lang">
+                RU
+                <img src={flagRussia} alt="" />
+              </span>
+            ),
+          },
+        ]}
+      />
     </div>
   );
 };
