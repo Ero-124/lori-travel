@@ -1,8 +1,8 @@
 {
   "name": "lori-travel",
   "version": "0.1.0",
-  "homepage": "https://ero-124.github.io/lori-travel",
   "private": true,
+  "homepage": "https://ero-124.github.io/lori-travel",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -16,6 +16,7 @@
     "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.1",
     "sass": "^1.58.3",
+    "swiper": "^9.1.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

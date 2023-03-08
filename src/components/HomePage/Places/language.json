@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "nameEn": "Aygehat",
+    "nameAm": "Այգեհատ",
+    "nameRu": "Аигехат",
+    "img": "aygehat.jpg",
+    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Reprehenderit earum dolor deserunt, autem sit ad. Placeat,laboriosam? Quaerat, cum ipsum."
+  },
+  {
+    "id": 2,
+    "nameEn": "Gargar",
+    "nameAm": "Գարգառ",
+    "nameRu": "Гаргар",
+    "img": "gyargyar",
+    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Reprehenderit earum dolor deserunt, autem sit ad. Placeat,laboriosam? Quaerat, cum ipsum."
+  },
+  {
+    "id": 3,
+    "nameEn": "Dendropark",
+    "nameAm": "Դենդրոպարկ",
+    "nameRu": "Дендропарк",
+    "img": "dendropark",
+    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Reprehenderit earum dolor deserunt, autem sit ad. Placeat,laboriosam? Quaerat, cum ipsum."
+  },
+  {
+    "id": 4,
+    "nameEn": "Dsegh",
+    "nameAm": "Դսեղ",
+    "nameRu": "Дсех",
+    "img": "dsegh",
+    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Reprehenderit earum dolor deserunt, autem sit ad. Placeat,laboriosam? Quaerat, cum ipsum."
+  },
+  {
+    "id": 5,
+    "nameEn": "Amazon of Lori",
+    "nameAm": "Լոռվա ամազոն",
+    "nameRu": "Амазон у Лори",
+    "img": "lorvaAmazon",
+    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Reprehenderit earum dolor deserunt, autem sit ad. Placeat,laboriosam? Quaerat, cum ipsum."
+  },
+  {
+    "id": 6,
+    "nameEn": "Margahovit",
+    "nameAm": "Մարգահովիտ",
+    "nameRu": "Маргаовит",
+    "img": "margahovit",
+    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Reprehenderit earum dolor deserunt, autem sit ad. Placeat,laboriosam? Quaerat, cum ipsum."
+  }
+]
