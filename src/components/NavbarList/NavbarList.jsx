@@ -55,10 +55,7 @@ const NavbarList = () => {
 
   return (
     <>
-      <nav
-        className={`header__navbar ${toggleBurgerMenu ? "active" : ""}`}
-        data-aos={width > 769 && "fade-left"}
-      >
+      <nav className={`header__navbar ${toggleBurgerMenu ? "active" : ""}`}>
         <ul className="navbar__list">
           {navbarList.map(({ name, to }) => {
             return (

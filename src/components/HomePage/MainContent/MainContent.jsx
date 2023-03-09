@@ -1,12 +1,14 @@
 import React from "react";
-import AosEffect from "../../../shared/AosEffect/AosEffect";
 import useLanguage from "../../../hooks/useLanguageContext";
 import traduction from "../language.json";
+import picture from "./img/picture.jpg";
+import pictureW from "./img/picture.webp";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import "./MainContent.scss";
 
 const MainContent = () => {
   const { language } = useLanguage();
-  AosEffect();
 
   return (
     <section className="main__wrapper">
@@ -19,10 +21,11 @@ const MainContent = () => {
             </p>
           </div>
           <div className="content__photo">
-            <img
-              src="https://bustourma.com/uploads/product/lg/befdf309-1569-4a37-b586-618d2f7c49bb.jpg"
-              alt="gif nature"
-            />
+            <LazyLoadImage src={picture} />
+           {/*  <picture>
+              <source srcSet={pictureW} type="image/webp" />
+              <img src={picture} alt="" />
+            </picture> */}
           </div>
         </div>
       </div>

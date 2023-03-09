@@ -4,7 +4,7 @@ import useLanguage from "../../hooks/useLanguageContext";
 import introVideo2 from "./video/videoplayback.webm";
 import traduction from "./language.json";
 import "./IntroVideo.scss";
-const IntroVideo = ({ skipVideo, setSkipVideo }) => {
+const MemoizedIntroVideo = React.memo(({ skipVideo, setSkipVideo }) => {
   const { language } = useLanguage();
   const [activeClass, setActiveClass] = useState();
 
@@ -58,11 +58,11 @@ const IntroVideo = ({ skipVideo, setSkipVideo }) => {
       )}
     </>
   );
-};
+});
 
-IntroVideo.propTypes = {
+MemoizedIntroVideo.propTypes = {
   skipVideo: PropTypes.bool,
   setSkipVideo: PropTypes.func,
 };
 
-export default IntroVideo;
+export default MemoizedIntroVideo;

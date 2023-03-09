@@ -1,19 +1,19 @@
 import React, { memo } from "react";
-import { Autoplay, EffectCoverflow } from "swiper";
+import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import { EffectCoverflow, Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import useLanguage from "../../../hooks/useLanguageContext";
 import AosEffect from "../../../shared/AosEffect/AosEffect";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight, faStar } from "@fortawesome/free-solid-svg-icons";
+import { places } from "./placeList";
+import traduction from "./content.json";
 
-import imgAygehat from "./img/aygehat.jpg";
-import imgGargar from "./img/gyargyar.jpg";
-import imgDendropark from "./img/dendropark.jpg";
-import imgDsegh from "./img/dsegh.jpg";
-import imgLorvaAmazon from "./img/lorvaAmazon.jpg";
-import imgMargahovit from "./img/margahovit.jpg";
-
+import "react-lazy-load-image-component/src/effects/blur.css";
 import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/thumbs";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 import "./Places.scss";
 
 const Places = memo(() => {
@@ -33,103 +33,53 @@ const Places = memo(() => {
     }
   };
 
-  const getTitle = () => {
+  const getPlaceDesc = (place) => {
     switch (language) {
       case "en":
-        return "Popular places";
+        return place.descEn;
       case "am":
-        return "Հայտնի վայրեր";
+        return place.descAm;
       case "ru":
-        return "Популярные места";
+        return place.descRu;
       default:
-        return "Popular places";
+        return place.nameEn;
     }
   };
-
-  const places = [
-    {
-      id: 1,
-      nameEn: "Aygehat",
-      nameAm: "Այգեհատ",
-      nameRu: "Аигехат",
-      img: imgAygehat,
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Reprehenderit earum dolor deserunt, autem sit ad. Placeat,laboriosam? Quaerat, cum ipsum.",
-    },
-    {
-      id: 2,
-      nameEn: "Gargar",
-      nameAm: "Գարգառ",
-      nameRu: "Гаргар",
-      img: imgGargar,
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Reprehenderit earum dolor deserunt, autem sit ad. Placeat,laboriosam? Quaerat, cum ipsum.",
-    },
-    {
-      id: 3,
-      nameEn: "Dendropark",
-      nameAm: "Դենդրոպարկ",
-      nameRu: "Дендропарк",
-      img: imgDendropark,
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Reprehenderit earum dolor deserunt, autem sit ad. Placeat,laboriosam? Quaerat, cum ipsum.",
-    },
-    {
-      id: 4,
-      nameEn: "Dsegh",
-      nameAm: "Դսեղ",
-      nameRu: "Дсех",
-      img: imgDsegh,
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Reprehenderit earum dolor deserunt, autem sit ad. Placeat,laboriosam? Quaerat, cum ipsum.",
-    },
-    {
-      id: 5,
-      nameEn: "Amazon of Lori",
-      nameAm: "Լոռվա ամազոն",
-      nameRu: "Амазон у Лори",
-      img: imgLorvaAmazon,
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Reprehenderit earum dolor deserunt, autem sit ad. Placeat,laboriosam? Quaerat, cum ipsum.",
-    },
-    {
-      id: 6,
-      nameEn: "Margahovit",
-      nameAm: "Մարգահովիտ",
-      nameRu: "Маргаовит",
-      img: imgMargahovit,
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Reprehenderit earum dolor deserunt, autem sit ad. Placeat,laboriosam? Quaerat, cum ipsum.",
-    },
-  ];
 
   return (
     <section className="popular-places">
       <div className="container">
-        <h2 className="popular-places__title">{getTitle()}</h2>
+        <h2 className="popular-places__title">{traduction[language].title}</h2>
         <Swiper
-          modules={[Autoplay, EffectCoverflow]}
-          effect={"coverflow"}
+          modules={[Pagination, Navigation, EffectCoverflow]}
           grabCursor={true}
-          centeredSlides={true}
+          effect="coverflow"
           loop={true}
-          slidesPerView={1}
-          autoplay={{
-            delay: 4000,
-            disableOnInteraction: false,
+          pagination={{
+            clickable: true,
           }}
           coverflowEffect={{
             rotate: 0,
             stretch: 0,
             depth: 100,
             modifier: 2.5,
+            slideShadows: true,
           }}
+          navigation={true}
+          centeredSlidesBounds={true}
+          slidesPerView={3}
           breakpoints={{
-            "@0.00": {
+            0: {
               slidesPerView: 1,
-              spaceBetween: 10,
+              spaceBetween: 0,
             },
-            "@0.75": {
+            767: {
               slidesPerView: 2,
               spaceBetween: 20,
             },
-            "@1.50": {
+            991: {
               slidesPerView: 3,
-              spaceBetween: 50,
+              spaceBetween: 30,
             },
           }}
           className="swiper_container"
@@ -138,16 +88,31 @@ const Places = memo(() => {
             return (
               <SwiperSlide key={place.id}>
                 <div className="place__img">
-                  <img src={place.img} alt="" />
+                  <LazyLoadImage src={place.img} />
                 </div>
                 <div className="place__info">
-                  <h3 className="place__title">{getPlaceName(place)}</h3>
-                  <p className="place__desc">{place.desc}</p>
+                  <div className="info__head">
+                    <h3 className="info__title">{getPlaceName(place)}</h3>
+                    <span>
+                      <FontAwesomeIcon icon={faStar} />
+                      <FontAwesomeIcon icon={faStar} />
+                      <FontAwesomeIcon icon={faStar} />
+                      <FontAwesomeIcon icon={faStar} />
+                      <FontAwesomeIcon icon={faStar} />
+                    </span>
+                  </div>
+                  <p className="place__desc">{getPlaceDesc(place)}</p>
                 </div>
               </SwiperSlide>
             );
           })}
         </Swiper>
+        <div className="place__more">
+          <Link to="/popular-places">
+            <span>{traduction[language].more}</span>
+            <FontAwesomeIcon icon={faArrowRight} />
+          </Link>
+        </div>
       </div>
     </section>
   );
