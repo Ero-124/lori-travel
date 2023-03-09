@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/975.29700d12.chunk.js","mappings":"yIAQA,UANiB,WACf,OACEA,EAAAA,EAAAA,KAAA,OAAAC,SAAK,YAET,C","sources":["pages/BlogPage/BlogPage.jsx"],"sourcesContent":["import React from 'react'\r\n\r\nconst BlogPage = () => {\r\n  return (\r\n    <div>BlogPage</div>\r\n  )\r\n}\r\n\r\nexport default BlogPage"],"names":["_jsx","children"],"sourceRoot":""}
