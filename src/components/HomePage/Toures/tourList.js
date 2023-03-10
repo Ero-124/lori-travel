@@ -1,6 +1,6 @@
 import { imageList } from "./imageList";
 
-export const places = [
+export const toures = [
   {
     id: 1,
     nameEn: "Aygehat",

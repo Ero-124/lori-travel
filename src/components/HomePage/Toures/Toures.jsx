@@ -1,56 +1,48 @@
-import React, { memo, useMemo } from "react";
+import React, { useMemo } from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight, faStar } from "@fortawesome/free-solid-svg-icons";
+import traduction from "./content.json";
+import useLanguage from "../../../hooks/useLanguageContext";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Navigation, Pagination, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import useLanguage from "../../../hooks/useLanguageContext";
-import AosEffect from "../../../shared/AosEffect/AosEffect";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight, faStar } from "@fortawesome/free-solid-svg-icons";
-import { places } from "./placeList";
-import traduction from "./content.json";
+import { toures } from "./tourList";
 
-import "react-lazy-load-image-component/src/effects/blur.css";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import "../../../styles/common.scss"
-  
-const Places = memo(() => {
-  AosEffect();
+const Toures = () => {
   const { language } = useLanguage();
   const { title, more } = traduction[language];
 
-  const getPlaceName = useMemo(() => {
-    switch (language) {
-      case "en":
-        return (place) => place.nameEn;
-      case "am":
-        return (place) => place.nameAm;
-      case "ru":
-        return (place) => place.nameRu;
-      default:
-        return (place) => place.nameEn;
-    }
-  }, [language]);
+  const getTourName = useMemo(() => {
+   switch (language) {
+     case "en":
+       return (place) => place.nameEn;
+     case "am":
+       return (place) => place.nameAm;
+     case "ru":
+       return (place) => place.nameRu;
+     default:
+       return (place) => place.nameEn;
+   }
+ }, [language]);
 
-  const getPlaceDesc = useMemo(() => {
-    switch (language) {
-      case "en":
-        return (place) => place.descEn;
-      case "am":
-        return (place) => place.descAm;
-      case "ru":
-        return (place) => place.descRu;
-      default:
-        return (place) => place.descEn;
-    }
-  }, [language]);
+ const getTourDesc = useMemo(() => {
+   switch (language) {
+     case "en":
+       return (place) => place.descEn;
+     case "am":
+       return (place) => place.descAm;
+     case "ru":
+       return (place) => place.descRu;
+     default:
+       return (place) => place.descEn;
+   }
+ }, [language]);
 
   return (
-    <section className="popular-places slider">
+    <section className="toures slider">
       <div className="container">
-        <h2 className="popular-places__title title">{title}</h2>
+        <h2 className="toures__title title">{title}</h2>
         <Swiper
           modules={[Pagination, Navigation, Autoplay]}
           grabCursor={true}
@@ -81,20 +73,20 @@ const Places = memo(() => {
           }}
           className="swiper_container"
         >
-          {places.map((place) => {
+          {toures.map((tour) => {
             return (
-              <SwiperSlide key={place.id}>
-                <div className="place__img slider__img">
+              <SwiperSlide key={tour.id}>
+                <div className="tour__img slider__img">
                   <LazyLoadImage
-                    src={place.img}
+                    src={tour.img}
                     loading="lazy"
                     effect="blur"
-                    alt={place.nameEn}
+                    alt={tour.nameEn}
                   />
                 </div>
-                <div className="place__info slider__info">
+                <div className="tour__info slider__info">
                   <div className="info__head slider__head">
-                    <h3 className="info__title slider__title">{getPlaceName(place)}</h3>
+                    <h3 className="info__title slider__title">{getTourName(tour)}</h3>
                     <span>
                       <FontAwesomeIcon icon={faStar} />
                       <FontAwesomeIcon icon={faStar} />
@@ -103,14 +95,14 @@ const Places = memo(() => {
                       <FontAwesomeIcon icon={faStar} />
                     </span>
                   </div>
-                  <p className="place__desc slider__desc">{getPlaceDesc(place)}</p>
+                  <p className="tour__desc slider__desc">{getTourDesc(tour)}</p>
                 </div>
               </SwiperSlide>
             );
           })}
         </Swiper>
-        <div className="place__more more">
-          <Link to="/popular-places">
+        <div className="tour__more more">
+          <Link to="/tours">
             <span>{more}</span>
             <FontAwesomeIcon icon={faArrowRight} />
           </Link>
@@ -118,6 +110,6 @@ const Places = memo(() => {
       </div>
     </section>
   );
-});
+};
 
-export default Places;
+export default Toures;

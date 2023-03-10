@@ -2,7 +2,6 @@ import React from "react";
 import useLanguage from "../../../hooks/useLanguageContext";
 import traduction from "../language.json";
 import picture from "./img/picture.jpg";
-import pictureW from "./img/picture.webp";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import "./MainContent.scss";
@@ -21,11 +20,7 @@ const MainContent = () => {
             </p>
           </div>
           <div className="content__photo">
-            <LazyLoadImage src={picture} />
-           {/*  <picture>
-              <source srcSet={pictureW} type="image/webp" />
-              <img src={picture} alt="" />
-            </picture> */}
+            <LazyLoadImage src={picture} loading="lazy" effect="blur" alt="photo"/>
           </div>
         </div>
       </div>
