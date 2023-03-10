@@ -1,14 +1,13 @@
 {
   "files": {
-    "main.css": "/lori-travel/static/css/main.ae53f38c.css",
-    "main.js": "/lori-travel/static/js/main.ce5303a9.js",
-    "static/css/386.b5fd6e3e.chunk.css": "/lori-travel/static/css/386.b5fd6e3e.chunk.css",
-    "static/js/386.758a937a.chunk.js": "/lori-travel/static/js/386.758a937a.chunk.js",
-    "static/js/814.80176e39.chunk.js": "/lori-travel/static/js/814.80176e39.chunk.js",
+    "main.css": "/lori-travel/static/css/main.b16e5cca.css",
+    "main.js": "/lori-travel/static/js/main.251a4324.js",
+    "static/css/51.d76b2fa0.chunk.css": "/lori-travel/static/css/51.d76b2fa0.chunk.css",
+    "static/js/51.e8688c7e.chunk.js": "/lori-travel/static/js/51.e8688c7e.chunk.js",
     "static/js/432.b76ab7dc.chunk.js": "/lori-travel/static/js/432.b76ab7dc.chunk.js",
     "static/js/975.56b9d073.chunk.js": "/lori-travel/static/js/975.56b9d073.chunk.js",
     "static/js/643.5d5c4528.chunk.js": "/lori-travel/static/js/643.5d5c4528.chunk.js",
-    "static/js/547.8f6e361b.chunk.js": "/lori-travel/static/js/547.8f6e361b.chunk.js",
+    "static/js/298.c938bd7d.chunk.js": "/lori-travel/static/js/298.c938bd7d.chunk.js",
     "static/media/videoplayback.webm": "/lori-travel/static/media/videoplayback.13eb1869f515eac017e7.webm",
     "static/media/margahovit.jpg": "/lori-travel/static/media/margahovit.c7dd4704d4e381e09b91.jpg",
     "static/media/aygehat.jpg": "/lori-travel/static/media/aygehat.00aa902c1ba5a4da380d.jpg",
@@ -16,10 +15,9 @@
     "static/media/gyargyar.jpg": "/lori-travel/static/media/gyargyar.6d3c0e856ab1abfbccc0.jpg",
     "static/media/lorvaAmazon.jpg": "/lori-travel/static/media/lorvaAmazon.570e4ac58a172e4a2ab3.jpg",
     "static/media/dsegh.jpg": "/lori-travel/static/media/dsegh.d81888673dbe4740b291.jpg",
-    "static/media/bgMenu.jpg": "/lori-travel/static/media/bgMenu.2f7e72e447ec0c72ae96.jpg",
+    "static/media/bgMenu.webp": "/lori-travel/static/media/bgMenu.eb6946ae80657a0eebf8.webp",
     "static/media/logo.webp": "/lori-travel/static/media/logo.a828d630bed716faf6c3.webp",
     "static/media/picture.jpg": "/lori-travel/static/media/picture.1bbd1bf2716564eb7af9.jpg",
-    "static/media/picture.webp": "/lori-travel/static/media/picture.9e5878b6326db2c03657.webp",
     "static/media/Roboto-Medium.woff": "/lori-travel/static/media/Roboto-Medium.b14ca2d2b289afceb0b0.woff",
     "static/media/Roboto-Black.woff": "/lori-travel/static/media/Roboto-Black.88d7f1b3ca9a9494d8e3.woff",
     "static/media/Roboto-Regular.woff": "/lori-travel/static/media/Roboto-Regular.31012f9b3e3da44f87e8.woff",
@@ -31,18 +29,17 @@
     "static/media/armenia.svg": "/lori-travel/static/media/armenia.7e93de4b7dccd9c4fd0acfd37b66515b.svg",
     "static/media/russia.svg": "/lori-travel/static/media/russia.f7ed61c974ace7ee4afd924a2d3204ef.svg",
     "index.html": "/lori-travel/index.html",
-    "main.ae53f38c.css.map": "/lori-travel/static/css/main.ae53f38c.css.map",
-    "main.ce5303a9.js.map": "/lori-travel/static/js/main.ce5303a9.js.map",
-    "386.b5fd6e3e.chunk.css.map": "/lori-travel/static/css/386.b5fd6e3e.chunk.css.map",
-    "386.758a937a.chunk.js.map": "/lori-travel/static/js/386.758a937a.chunk.js.map",
-    "814.80176e39.chunk.js.map": "/lori-travel/static/js/814.80176e39.chunk.js.map",
+    "main.b16e5cca.css.map": "/lori-travel/static/css/main.b16e5cca.css.map",
+    "main.251a4324.js.map": "/lori-travel/static/js/main.251a4324.js.map",
+    "51.d76b2fa0.chunk.css.map": "/lori-travel/static/css/51.d76b2fa0.chunk.css.map",
+    "51.e8688c7e.chunk.js.map": "/lori-travel/static/js/51.e8688c7e.chunk.js.map",
     "432.b76ab7dc.chunk.js.map": "/lori-travel/static/js/432.b76ab7dc.chunk.js.map",
     "975.56b9d073.chunk.js.map": "/lori-travel/static/js/975.56b9d073.chunk.js.map",
     "643.5d5c4528.chunk.js.map": "/lori-travel/static/js/643.5d5c4528.chunk.js.map",
-    "547.8f6e361b.chunk.js.map": "/lori-travel/static/js/547.8f6e361b.chunk.js.map"
+    "298.c938bd7d.chunk.js.map": "/lori-travel/static/js/298.c938bd7d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ae53f38c.css",
-    "static/js/main.ce5303a9.js"
+    "static/css/main.b16e5cca.css",
+    "static/js/main.251a4324.js"
   ]
 }
