@@ -81,11 +81,7 @@ const NavbarList = () => {
                     </button>
                     {isDropdownOpen && (
                       <ul className="dropdown__menu">
-                        <li
-                          className="dropdown__item"
-                          data-aos="zoom-in"
-                          data-aos-anchor-placement="top-bottom"
-                        >
+                        <li className="dropdown__item">
                           <NavLink className="dropdown__link" to="/info/foods">
                             <span>{subInfo[0]}</span>
                             <FontAwesomeIcon
@@ -94,7 +90,7 @@ const NavbarList = () => {
                             />
                           </NavLink>
                         </li>
-                        <li className="dropdown__item" data-aos="zoom-in">
+                        <li className="dropdown__item">
                           <NavLink
                             className="dropdown__link"
                             to="/info/transport"
@@ -106,7 +102,7 @@ const NavbarList = () => {
                             />
                           </NavLink>
                         </li>
-                        <li className="dropdown__item" data-aos="zoom-in">
+                        <li className="dropdown__item">
                           <NavLink
                             className="dropdown__link"
                             to="/info/gazebos"

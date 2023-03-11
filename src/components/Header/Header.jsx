@@ -6,6 +6,8 @@ import logo from "./img/logo.webp";
 import "./Header.scss";
 import NavbarList from "../NavbarList/NavbarList";
 
+
+
 const Header = () => {
   AosEffect();
 

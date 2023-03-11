@@ -1,15 +1,9 @@
-import imgAygehat from "./img/aygehat.jpg";
-import imgGargar from "./img/gyargyar.jpg";
-import imgDendropark from "./img/dendropark.jpg";
-import imgDsegh from "./img/dsegh.jpg";
-import imgLorvaAmazon from "./img/lorvaAmazon.jpg";
-import imgMargahovit from "./img/margahovit.jpg";
+import imgTumanyan from "./img/tumanyan.jpg";
+import imgSurbHovhannes from "./img/surb-hovhannes.jpg";
+import imgSanahin from "./img/sanahin.jpg";
 
 export const imageList = {
-  imgAygehat,
-  imgGargar,
-  imgDendropark,
-  imgDsegh,
-  imgLorvaAmazon,
-  imgMargahovit,
+  imgTumanyan,
+  imgSurbHovhannes,
+  imgSanahin,
 };

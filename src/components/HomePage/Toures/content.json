@@ -1,14 +1,20 @@
 {
   "en": {
     "title": "Toures",
-    "more": "View more"
+    "more": "View more",
+    "price": "Price",
+    "departure": "Nearest departure"
   },
   "am": {
     "title": "Տուրեր",
-    "more": "Ավելին"
+    "more": "Ավելին",
+    "price": "Գինը",
+    "departure": "Մոտակա մեկնում"
   },
   "ru": {
     "title": "Туры",
-    "more": "Еще"
+    "more": "Еще",
+    "price": "Цена",
+    "departure": "Ближ. отправление"
   }
 }

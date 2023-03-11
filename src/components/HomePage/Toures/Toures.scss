@@ -1,0 +1,200 @@
+.toures {
+  .swiper__container {
+    .swiper-slide {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      overflow: hidden;
+      color: #000;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+
+      .tour__img {
+        position: relative;
+        a {
+          span {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+
+            img {
+              width: 100%;
+              height: 240px;
+              border-radius: 20px 20px 0 0;
+              overflow: hidden;
+              display: block;
+              object-fit: cover;
+              object-position: center center;
+              transition: all 1s;
+
+              &:hover {
+                transform: scale(1.5);
+              }
+            }
+          }
+        }
+        .tour__category {
+          position: absolute;
+          top: 0;
+          right: 15px;
+          padding: 5px;
+          background-color: #367940;
+          border-radius: 0 0 8px 8px;
+          span {
+            font-size: 14px;
+            letter-spacing: 1.4px;
+            color: #fff;
+            text-transform: uppercase;
+          }
+        }
+      }
+      .tour__info {
+        padding: 10px;
+        font-family: var(--font-family-secondary);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+
+        .info__content {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 100%;
+          margin-bottom: 15px;
+
+          .info__title {
+            a {
+              h3 {
+                color: #131010;
+                font-weight: 700;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+              }
+            }
+          }
+          .tour__desc {
+            line-height: 150%;
+            color: #646161;
+            font-size: 14px;
+          }
+        }
+        .info__about {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding-bottom: 25px;
+          margin-bottom: 10px;
+          border-bottom: 1px solid #eee;
+          span svg path {
+            fill: gold;
+          }
+          .info__location {
+            svg {
+              position: relative;
+              top: 1px;
+
+              path {
+                fill: #d41e25;
+              }
+            }
+            span {
+              color: #367940;
+              font-weight: 700;
+              margin-left: 4px;
+            }
+          }
+        }
+        .info__price_and__departure {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .info__pricing {
+            display: flex;
+            align-items: center;
+            font-family: var(--font-family-default);
+
+            .pricing__text {
+              color: gold;
+              font-size: 24px;
+              margin-right: 5px;
+            }
+            .pricing__payment {
+              font-size: 19px;
+              color: red;
+            }
+          }
+          .info__departure {
+            font-family: var(--font-family-default);
+            display: flex;
+            flex-direction: column;
+            font-size: 12px;
+            .departure__text {
+              margin-bottom: 8px;
+              color: #367940;
+              font-weight: 700;
+            }
+            .departure__date {
+              color: gray;
+              text-align: right;
+            }
+          }
+        }
+      }
+    }
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+      font-size: 35px;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      top: 30%;
+    }
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  top: 35%;
+}
+
+@media screen and (max-width: 479px) {
+  .toures {
+    .swiper__container {
+      .swiper-slide {
+        .tour__info {
+          .info__content {
+            .info__title {
+              a {
+                h3 {
+                  font-size: 16px;
+                }
+              }
+            }
+            .tour__desc {
+              font-size: 12px;
+            }
+          }
+
+          .info__price_and__departure {
+            .info__pricing {
+              .pricing__text {
+                font-size: 20px;
+                margin-right: 8px;
+              }
+              .pricing__payment {
+                font-size: 17px;
+                color: red;
+              }
+            }
+          }
+        }
+      }
+      .swiper-button-next:after,
+      .swiper-button-prev:after {
+        font-size: 35px;
+      }
+    }
+  }
+}

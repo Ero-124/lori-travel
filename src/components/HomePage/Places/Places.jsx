@@ -1,4 +1,4 @@
-import React, { memo, useMemo } from "react";
+import React, { memo } from "react";
 import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Navigation, Pagination, Autoplay } from "swiper";
@@ -14,38 +14,12 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import "../../../styles/common.scss"
-  
+import "../../../styles/common.scss";
+
 const Places = memo(() => {
   AosEffect();
   const { language } = useLanguage();
   const { title, more } = traduction[language];
-
-  const getPlaceName = useMemo(() => {
-    switch (language) {
-      case "en":
-        return (place) => place.nameEn;
-      case "am":
-        return (place) => place.nameAm;
-      case "ru":
-        return (place) => place.nameRu;
-      default:
-        return (place) => place.nameEn;
-    }
-  }, [language]);
-
-  const getPlaceDesc = useMemo(() => {
-    switch (language) {
-      case "en":
-        return (place) => place.descEn;
-      case "am":
-        return (place) => place.descAm;
-      case "ru":
-        return (place) => place.descRu;
-      default:
-        return (place) => place.descEn;
-    }
-  }, [language]);
 
   return (
     <section className="popular-places slider">
@@ -94,7 +68,9 @@ const Places = memo(() => {
                 </div>
                 <div className="place__info slider__info">
                   <div className="info__head slider__head">
-                    <h3 className="info__title slider__title">{getPlaceName(place)}</h3>
+                    <h3 className="info__title slider__title">
+                      {place.placeName[language]}
+                    </h3>
                     <span>
                       <FontAwesomeIcon icon={faStar} />
                       <FontAwesomeIcon icon={faStar} />
@@ -103,7 +79,9 @@ const Places = memo(() => {
                       <FontAwesomeIcon icon={faStar} />
                     </span>
                   </div>
-                  <p className="place__desc slider__desc">{getPlaceDesc(place)}</p>
+                  <p className="place__desc slider__desc">
+                    {place.description[language]}
+                  </p>
                 </div>
               </SwiperSlide>
             );

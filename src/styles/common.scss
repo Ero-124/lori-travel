@@ -14,13 +14,12 @@
   }
 }
 
-
 // Slider ======================================
 .slider {
   .swiper_container {
     .swiper-slide {
       width: 100%;
-      height: 100%;
+      height: auto;
       border-radius: 20px;
       overflow: hidden;
       color: #fff;
@@ -42,15 +41,13 @@
           object-position: center center;
         }
       }
-
       .slider__info {
         padding: 10px;
-        color: #000;
+        color: #131010;
         font-family: var(--font-family-secondary);
         .slider__head {
           display: flex;
           justify-content: space-between;
-          align-items: center;
           margin-bottom: 15px;
 
           span svg path {
@@ -60,15 +57,20 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1.1px;
-            margin-bottom: 15px;
-          }
-          span {
           }
         }
         .slider__desc {
           line-height: 150%;
         }
       }
+    }
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+      font-size: 45px;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      top: 36%;
     }
   }
 }
@@ -97,21 +99,17 @@
 @media screen and (max-width: 767px) {
   .slider {
     .swiper_container {
-      .swiper__slide {
+      .swiper-slide {
         .slider__img {
           img {
             height: 300px;
           }
         }
       }
-    }
-    .swiper-button-next:after,
-    .swiper-button-prev:after {
-      font-size: 25px;
-    }
-    .swiper-button-next,
-    .swiper-button-prev {
-      top: 36%;
+      .swiper-button-next:after,
+      .swiper-button-prev:after {
+        font-size: 35px;
+      }
     }
   }
 }
@@ -119,21 +117,21 @@
 @media screen and (max-width: 479px) {
   .slider {
     .swiper_container {
-      .swiper__slide {
+      .swiper-slide {
         .slider__img {
           img {
             width: 100%;
             height: 220px;
           }
-          .slider__info {
-            .slider__head {
-              .slider__title {
-                font-size: 16px;
-              }
+        }
+        .slider__info {
+          .slider__head {
+            .slider__title {
+              font-size: 16px;
             }
-            .slider__desc {
-              font-size: 12px;
-            }
+          }
+          .slider__desc {
+            font-size: 12px;
           }
         }
       }
