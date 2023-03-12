@@ -113,7 +113,7 @@
           .info__pricing {
             display: flex;
             align-items: center;
-            font-family: var(--font-family-default);
+            font-family: var(--font-family-secondary);
 
             .pricing__text {
               color: gold;
@@ -123,6 +123,7 @@
             .pricing__payment {
               font-size: 19px;
               color: red;
+              font-family: var(--font-family-default);
             }
           }
           .info__departure {
@@ -138,6 +139,10 @@
             .departure__date {
               color: gray;
               text-align: right;
+
+              svg {
+                margin-right: 7px;
+              }
             }
           }
         }

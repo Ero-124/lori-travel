@@ -1,14 +1,11 @@
 {
   "en": {
-    "title": "Popular places",
-    "more": "View more"
+    "title": "Popular places"
   },
   "am": {
-    "title": "Հայտնի վայրեր",
-    "more": "Ավելին"
+    "title": "Հայտնի վայրեր"
   },
   "ru": {
-    "title": "Популярные места",
-    "more": "Еще"
+    "title": "Популярные места"
   }
 }

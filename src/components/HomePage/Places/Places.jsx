@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faStar } from "@fortawesome/free-solid-svg-icons";
 import { places } from "./placeList";
 import traduction from "./content.json";
+import buttonLang from "../../../common/buttonLang/buttonLang.json";
 
 import "react-lazy-load-image-component/src/effects/blur.css";
 import "swiper/css";
@@ -19,7 +20,8 @@ import "../../../styles/common.scss";
 const Places = memo(() => {
   AosEffect();
   const { language } = useLanguage();
-  const { title, more } = traduction[language];
+  const { title } = traduction[language];
+  const { more } = buttonLang[language];
 
   return (
     <section className="popular-places slider">

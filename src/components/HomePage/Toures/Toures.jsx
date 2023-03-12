@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowRight,
+  faCalendarDays,
   faLocationDot,
   faStar,
 } from "@fortawesome/free-solid-svg-icons";
@@ -12,11 +13,13 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Navigation, Pagination, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { toures } from "./tourList";
+import buttonLang from "../../../common/buttonLang/buttonLang.json";
 import "./Toures.scss";
 
 const Toures = () => {
   const { language } = useLanguage();
-  const { title, more, price, departure } = traduction[language];
+  const { title, price, departure } = traduction[language];
+  const { more } = buttonLang[language];
 
   return (
     <section className="toures">
@@ -25,9 +28,10 @@ const Toures = () => {
         <Swiper
           modules={[Pagination, Navigation, Autoplay]}
           grabCursor={true}
-            autoplay={{
+          autoplay={{
             delay: 4000,
             disableOnInteraction: false,
+            pauseOnMouseEnter: true,
           }}
           loop={true}
           pagination={{
@@ -102,6 +106,7 @@ const Toures = () => {
                     <div className="info__departure">
                       <span className="departure__text">{departure}</span>
                       <span className="departure__date">
+                        <FontAwesomeIcon icon={faCalendarDays} />
                         {tour.departureDate}
                       </span>
                     </div>

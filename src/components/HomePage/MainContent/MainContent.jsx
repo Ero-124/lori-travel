@@ -1,6 +1,6 @@
 import React from "react";
 import useLanguage from "../../../hooks/useLanguageContext";
-import traduction from "../language.json";
+import traduction from "./language.json";
 import picture from "./img/picture.jpg";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
