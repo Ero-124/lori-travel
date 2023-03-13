@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunklori_travel=self.webpackChunklori_travel||[]).push([[432],{8230:function(e,r,u){u.r(r);u(2791);var l=u(184);r.default=function(){return(0,l.jsx)("div",{children:"TouresPage"})}}}]);
-//# sourceMappingURL=432.b76ab7dc.chunk.js.map

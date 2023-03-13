@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/432.b76ab7dc.chunk.js","mappings":"2IAMA,UAJmB,WACjB,OAAOA,EAAAA,EAAAA,KAAA,OAAAC,SAAK,cACd,C","sources":["pages/TouresPage/TouresPage.jsx"],"sourcesContent":["import React from \"react\";\r\n\r\nconst TouresPage = () => {\r\n  return <div>TouresPage</div>;\r\n};\r\n\r\nexport default TouresPage;\r\n"],"names":["_jsx","children"],"sourceRoot":""}

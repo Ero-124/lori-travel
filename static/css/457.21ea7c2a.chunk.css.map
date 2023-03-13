@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/457.21ea7c2a.chunk.css","mappings":"AAAA,QACE,0BAEA,gBADA,cACA","sources":["components/Footer/Footer.scss"],"sourcesContent":[".footer {\r\n  background: rgba(0, 0, 0, 0.3);\r\n  padding: 50px 0;\r\n  margin-top: 50px;\r\n}\r\n"],"names":[],"sourceRoot":""}
