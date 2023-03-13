@@ -6,14 +6,6 @@
   height: 100px;
   z-index: 100;
   background: rgba(0, 0, 0, 0.9);
-  /* background: rgb(2, 41, 0);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 41, 0, 1) 0%,
-    rgba(24, 153, 123, 1) 41%,
-    rgba(12, 177, 170, 1) 59%,
-    rgba(0, 50, 2, 1) 84%
-  ); */
   .header__wrapper {
     display: flex;
     justify-content: space-between;
@@ -22,15 +14,19 @@
     height: 100px;
     .header__logo {
       display: block;
-      width: 195px;
-      img {
+      span {
+        color: #367940;
+        font-size: 45px;
+        font-family: var(--font-family-secondary);
+      }
+      /* img {
         position: relative;
         top: 5px;
         display: block;
         width: 100%;
         height: 100%;
         object-fit: contain;
-      }
+      } */
     }
   }
 }

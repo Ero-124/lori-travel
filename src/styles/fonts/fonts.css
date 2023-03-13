@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "Roboto-Regular";
+  src: local("Roboto-Regular"), url("Roboto/Roboto-Regular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto-Black";
+  src: local("Roboto-Black"), url("Roboto/Roboto-Black.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto-Medium";
+  src: local("Roboto-Medium"), url("Roboto/Roboto-Medium.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Armenian";
+  src: local("Noto Sans Armenian"),
+    url("Noto-Armenian/NotoSansArmenian-Regular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway-Regular";
+  src: local("Raleway-Regular"),
+    url("Raleway/Raleway-Regular.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Raleway-Medium";
+  src: local("Raleway-Medium"),
+    url("Raleway/Raleway-Medium.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Raleway-Bold";
+  src: local("Raleway-Bold"), url("Raleway/Raleway-Bold.woff") format("woff");
+  font-display: swap;
+}

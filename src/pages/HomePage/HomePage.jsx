@@ -1,8 +1,11 @@
-import React from "react";
-import Blog from "../../components/HomePage/Blog/Blog";
-import MainContent from "../../components/HomePage/MainContent/MainContent";
-import Places from "../../components/HomePage/Places/Places";
-import Toures from "../../components/HomePage/Toures/Toures";
+import React, { lazy } from "react";
+
+const Blog = lazy(() => import("../../components/HomePage/Blog/Blog"));
+const MainContent = lazy(() =>
+  import("../../components/HomePage/MainContent/MainContent")
+);
+const Places = lazy(() => import("../../components/HomePage/Places/Places"));
+const Toures = lazy(() => import("../../components/HomePage/Toures/Toures"));
 
 const HomePage = () => {
   return (

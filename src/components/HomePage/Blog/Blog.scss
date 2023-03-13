@@ -1,4 +1,5 @@
 .blog {
+  padding: 50px 0;
   .blog__wrapper {
     .blog__item {
       display: flex;
@@ -18,9 +19,14 @@
         .more a {
           margin-left: 0 !important;
         }
+
+        .item__photo {
+          padding-left: 15px;
+          padding-right: 0;
+        }
       }
       .item__photo {
-        margin-right: 15px;
+        padding-right: 15px;
         span {
           width: 300px;
           height: 300px;
@@ -40,10 +46,92 @@
 
         .item__title {
           font-size: 20px;
+          line-height: 150%;
         }
         .item__description {
           font-size: 16px;
+          line-height: 150%;
           color: #fff8f8;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .blog {
+    .blog__wrapper {
+      .blog__item {
+        .item__photo {
+          span {
+            width: 250px;
+            height: 250px;
+          }
+        }
+        .item__info {
+          .item__title {
+            font-size: 19px;
+            margin-bottom: 12px;
+          }
+          .item__description {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  .blog {
+    .blog__wrapper {
+      .blog__item {
+        display: block;
+        margin-bottom: 20px;
+        .item__photo {
+          float: left;
+          padding-left: 0 !important;
+          padding-right: 15px !important;
+          span {
+            width: 150px;
+            height: 150px;
+          }
+        }
+        .item__info {
+          text-align: justify;
+          display: block;
+          .item__title {
+            font-size: 15px;
+          }
+          .item__description {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .blog {
+    .blog__wrapper {
+      .blog__item {
+        margin-bottom: 15px;
+        .item__photo {
+          float: left; 
+          span {
+            width: 120px;
+            height: 120px;
+          }
+        }
+        .item__info {
+          .item__title {
+            font-size: 12px;
+          }
+          .item__description {
+            font-size: 10px;
+          }
         }
       }
     }

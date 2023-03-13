@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { lazy, useState } from "react";
 import AosEffect from "../../shared/AosEffect/AosEffect";
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
-import RoutesConfig from "../../routes/RoutesConfig";
-import MemoizedIntroVideo from "../IntroVideo/IntroVideo";
 import "./App.scss";
+const Header = lazy(() => import("../Header/Header"));
+const Footer = lazy(() => import("../Footer/Footer"));
+const MemoizedIntroVideo = lazy(() => import("../IntroVideo/IntroVideo"));
+const RoutesConfig = lazy(() => import("../../routes/RoutesConfig"));
 
 function App() {
   AosEffect();

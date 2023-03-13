@@ -4,6 +4,7 @@ import useLanguage from "../../hooks/useLanguageContext";
 import introVideo2 from "./video/videoplayback.webm";
 import traduction from "./language.json";
 import "./IntroVideo.scss";
+
 const MemoizedIntroVideo = React.memo(({ skipVideo, setSkipVideo }) => {
   const { language } = useLanguage();
   const [activeClass, setActiveClass] = useState();
@@ -42,18 +43,16 @@ const MemoizedIntroVideo = React.memo(({ skipVideo, setSkipVideo }) => {
       {!skipVideo && (
         <div className="video__wrapper">
           {MyVideoComponent()}
-          <a
-            href="#home"
+          <button
             onClick={handleSkipVideo}
             className={`skip__btn ${activeClass}`}
-            /*  className={activeClass && "active"} */
           >
             <span></span>
             <span></span>
             <span></span>
             <span></span>
             {traduction[language].skip}
-          </a>
+          </button>
         </div>
       )}
     </>
