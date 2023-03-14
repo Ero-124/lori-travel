@@ -2,4 +2,95 @@
   background: rgba(0, 0, 0, 0.3);
   padding: 50px 0;
   margin-top: 50px;
+
+  .footer__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .footer__logo {
+      span {
+        font-size: 25px;
+      }
+    }
+    .footer__navigation {
+      margin: 25px 0;
+      position: relative;
+      z-index: 1;
+    }
+    .footer__social {
+      display: flex;
+      position: relative;
+      margin-bottom: 25px;
+      .social__item {
+        position: relative;
+
+        a {
+          display: inline-block;
+          width: 60px;
+          height: 60px;
+          line-height: 64px;
+          background-color: #fff;
+          border-radius: 50%;
+          text-align: center;
+          margin: 0 8px;
+          box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+          transform: translateY(0) scale(1);
+          transition: 0.3s;
+
+          svg {
+            font-size: 25px;
+            color: #000;
+            line-height: 60px;
+          }
+        }
+        span {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) scale(0);
+          font-size: 16px;
+        }
+
+        @media screen and (min-width: 991px) {
+          &:hover {
+            span {
+              transform: translate(-50%, 250%) scale(1);
+            }
+            a {
+              transform: translateY(-6px) scale(1.2);
+              margin: 0 20px;
+
+              svg path {
+                fill: #fff;
+              }
+            }
+          }
+
+          &:nth-child(1):hover a {
+            background: #3b5998;
+          }
+          &:nth-child(2):hover a {
+            background: #c32aa3;
+          }
+          &:nth-child(3):hover a {
+            background: #2aabee;
+          }
+        }
+
+        &:nth-child(1) svg path {
+          fill: #3b5998;
+        }
+        &:nth-child(2) svg path {
+          fill: #c32aa3;
+        }
+        &:nth-child(3) svg path {
+          fill: #2aabee;
+        }
+      }
+    }
+    .footer__copyright {
+      margin-top: 20px;
+    }
+  }
 }

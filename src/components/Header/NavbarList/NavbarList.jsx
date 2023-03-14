@@ -1,28 +1,25 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import { useWindowSize } from "../../hooks/useWindowSize";
+import { useWindowSize } from "../../../hooks/useWindowSize";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import AosEffect from "../../shared/AosEffect/AosEffect";
 import {
   faEthernet,
   faTaxi,
   faUtensils,
 } from "@fortawesome/free-solid-svg-icons";
-import useLanguage from "../../hooks/useLanguageContext";
-import ChangeLanguage from "../Header/ChangeLanguage/ChangeLanguage";
+import useLanguage from "../../../hooks/useLanguageContext";
 import traduction from "../NavbarList/language.json";
 import "./NavbarList.scss";
-const NavbarList = () => {
+
+const NavbarList = ({ burger }) => {
   const [toggleBurgerMenu, setToggleBurgerMenu] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
   const location = useLocation();
-  const { language } = useLanguage();
   const width = useWindowSize();
-
-  AosEffect();
-
+  const { language } = useLanguage();
   const { links, subInfo } = traduction[language];
+
   const navbarList = [
     { name: links[0], to: "/" },
     { name: links[1], to: "/info" },
@@ -30,6 +27,11 @@ const NavbarList = () => {
     { name: links[3], to: "/blog" },
     { name: links[4], to: "/about" },
   ];
+
+   useEffect(() => {
+    setIsDropdownOpen(false);
+    setToggleBurgerMenu(false)
+  }, [location.pathname]);
 
   const handleDropdownClick = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -58,13 +60,15 @@ const NavbarList = () => {
     };
   }, []);
 
-  useEffect(() => {
-    setIsDropdownOpen(false);
-  }, [location.pathname]);
+ 
 
   return (
     <>
-      <nav className={`header__navbar ${toggleBurgerMenu ? "active" : ""}`}>
+      <nav
+        className={`header__navbar ${burger ? "show" : "hide"}  ${
+          toggleBurgerMenu ? "active" : ""
+        }`}
+      >
         <ul className="navbar__list">
           {navbarList.map(({ name, to }) => {
             const infoName = links[1];
@@ -77,7 +81,6 @@ const NavbarList = () => {
                       className="navbar__link"
                     >
                       <span>{name}</span>
-                      <div className="wave"></div>
                     </button>
                     {isDropdownOpen && (
                       <ul className="dropdown__menu">
@@ -124,16 +127,14 @@ const NavbarList = () => {
                     onClick={handleClickLink}
                   >
                     <span>{name}</span>
-                    <div className="wave"></div>
                   </NavLink>
                 )}
               </li>
             );
           })}
         </ul>
-        <ChangeLanguage />
       </nav>
-      {width <= 766.9 && (
+      {width <= 766.9 && burger && (
         <div
           className={`burger__menu ${toggleBurgerMenu ? "active" : ""}`}
           onClick={handleClickMenu}
